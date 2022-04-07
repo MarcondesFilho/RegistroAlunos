@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RegistroAlunos.DAL\RegistroAlunos.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Apresentação\FrmCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Apresentação\FrmAluno - Cópia.Designer.cs">
+      <DependentUpon>FrmAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Apresentação\FrmAluno.cs" />
+    <Compile Update="Apresentação\FrmAluno.Designer.cs">
+      <DependentUpon>FrmAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Apresentação\FrmLogin.cs" />
+    <Compile Update="Apresentação\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Apresentação\FrmRegistroAlunos.cs" />
+    <Compile Update="Apresentação\FrmRegistroAlunos.Designer.cs">
+      <DependentUpon>FrmRegistroAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Apresentação\FrmAluno - Cópia.resx">
+      <DependentUpon>FrmAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Apresentação\FrmAluno.resx">
+      <DependentUpon>FrmAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Apresentação\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Apresentação\FrmRegistroAlunos.resx">
+      <DependentUpon>FrmRegistroAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
